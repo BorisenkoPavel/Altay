@@ -1,0 +1,1555 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+input
+	&::-webkit-input-placeholder
+		font-size: 12px
+		font-family: opensans
+	&::-moz-placeholder          
+		font-size: 12px
+		font-family: opensans	
+	&:-moz-placeholder           
+		font-size: 12px
+		font-family: opensans	
+	&:-ms-input-placeholder      
+		font-size: 12px
+		font-family: opensans
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	color: $text
+	background-image: url(../img/ornament.png)
+	background-color: #5F2427
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+
+b, strong
+	font-weight: bold
+
+section
+	padding: 60px 50px 60px
+
+.wrapper 
+	display: flex
+
+h1, h2, h3
+	font-family: Conqueror
+
+.section_title
+	color: #fff
+	font-size: 48px
+	margin-bottom: 60px
+	text-align: center
+	font-family: Conqueror
+
+.main-content
+	padding-left: 300px
+	transition: .3s ease
+.menu
+	text-align: center
+	position: fixed
+	height: 100vh
+	width: 300px
+	background-color: #5F2427
+	padding-top: 20px
+	box-shadow: 0 0 10px 10px rgba(0,0,0, 0.2)
+	transition: .3s ease
+	z-index: 1000
+	.logo
+		img 
+			display: block
+			margin: auto
+	&.active
+.phone
+	font-weight: bold
+	text-align: center
+	padding: 70px 0 40px
+	font-size: 18px
+	position: relative
+	max-width: 200px
+	margin: auto
+	color: #fff
+	padding-left: 40px
+	font-family: 'Conqueror'
+	&:before
+		content: ''
+		background-image: url(../img/contacts.png)
+		background-repeat: no-repeat
+		background-position: 0 0
+		width: 35px
+		height: 35px
+		position: absolute
+		left: 15px
+
+.logo-ae
+	margin-top: 70px
+
+.nav
+		list-style: none
+		padding: 0
+		text-align: center
+		margin-top: 40px
+		font-family: OpenSans
+		font-weight: 700
+		li
+			width: 100%
+			padding: 0
+			a 
+				color: #fff
+				transition:  .3s ease
+				position: relative
+				line-height: 35px
+				&:hover
+					color: $accent
+					text-decoration: none
+					&:before
+						content: '\2014\2014\2014'
+						font-family: 'font awesome 5 pro'
+						font-weight: 900
+						font-size: 5px
+						position: absolute
+						left: -25px
+						vertical-align: middle
+					&:after
+						content: '\2014\2014\2014'
+						font-family: 'font awesome 5 pro'
+						font-weight: 900
+						font-size: 5px
+						position: absolute
+						right: -25px
+						vertical-align: middle
+						
+.button 
+		background-color: $accent
+		color: $text 
+		padding: 18px 40px
+		font-weight: 700
+		font-family: OpenSans
+		white-space: nowrap
+		font-size: 14px
+		font-style: italic
+		&:hover
+			color: $red
+			text-decoration: none
+header
+	position: relative
+	text-align: center
+.header-mobile
+	display: flex
+	align-items: center
+	padding: 20px
+	justify-content: space-between
+	background-color: #672A2C
+	position: relative
+	display: none
+	.lang
+		li 
+			display: block
+	.mobile-button-menu
+		width: 85px
+		height: 85px
+		background-color: $accent
+		text-align: center
+		cursor: pointer
+		z-index: 2000
+		position: relative
+		i
+			font-size: 60px
+			line-height: 85px
+.mobile-menu
+	position: absolute
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	height: 100vh
+	background-color: rgba(103, 42, 44, .95)
+	font-size: 14px
+	display: none
+	text-align: center
+	.nav
+		margin-top: 50px
+.logo-header-mobile
+	img
+		height: 90px
+	
+
+
+.mouse
+	position: absolute
+	width: 30px
+	height: 74px
+	background-image: url(../img/mouse.png)
+	bottom: 20px
+	right: 0
+	left: 0	
+	margin: auto
+	display: block
+	background-repeat: no-repeat
+
+.slider
+	position: relative
+
+.banner
+	height: 100vh
+
+.banner-img
+	width: 100%
+	height: 100vh
+	background-size: cover
+	background-position: center
+.slick-nav
+	.arrow
+		height: 140px
+		width: 1px
+		background-color: $accent
+		position: absolute
+	.arrow-wrap
+		padding: 10px	
+		cursor: pointer
+		position: absolute
+		right: 42px
+		height: 140px
+	.nav__next
+		top: 100px
+	.nav__prev
+		bottom: 100px
+	.prev:before
+			content: ''
+			position: absolute
+			left: -5px
+			right: 0
+			margin: auto
+			bottom: -10px
+			border: 6px solid transparent
+			border-top: 5px solid $accent
+
+	.next:before
+			content: ''
+			position: absolute
+			left: -5px
+			right: 0
+			margin: auto
+			top: -10px
+			border: 5px solid transparent
+			border-bottom: 5px solid $accent
+.slick-dots
+	position: absolute
+	right: 42px
+	display: block
+	margin: auto
+	top: 0
+	bottom: 0
+	list-style: none
+	display: flex
+	flex-direction: column
+	justify-content: center
+	li 
+		margin-bottom: 17px
+		width: 20px
+		height: 20px
+		border: 3px solid $accent
+		position: relative
+		cursor: pointer
+		button
+			font-size: 0
+			background-color: $accent
+			width: 2px
+			height: 2px
+			border: none
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			margin: auto
+			outline: none
+			display: none
+		&:last-child
+			margin: 0
+
+	.slick-active 
+		border: 3px solid #fff
+	.slick-active:before
+			content: ''
+			display: block
+			background-color: #fff
+			width: 6px
+			height: 6px
+			border: none
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			margin: auto
+.slick-vertical .slick-slide 
+	border: none!important
+	width: 100%!important
+.carousel-slick__button-mobile
+	margin-top: 40px
+	padding: 18px 90px
+	display: none
+.hide-menu-button
+	position: fixed
+	width: 85px
+	height: 85px
+	top: 0
+	left: 0
+	background-color: $accent
+	font-size: 50px
+	color: $text
+	text-align: center
+	cursor: pointer
+	z-index: 2000
+	left: 300px
+	transition: .3s ease
+	i 
+		line-height: 85px
+.lang
+	padding: 0
+	margin: 0
+
+	li 
+		display: inline-block
+		margin-right: 5px
+		a
+			color: rgba(255,255,255, .3)
+			text-decoration: none
+	.active a
+		color: $accent
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 2px
+			width: 100%
+			background-color: $accent
+			bottom: -5px
+
+.carousel-slick__item
+	position: relative
+.carousel-slick
+	&__text-block
+		position: absolute
+		width: 440px
+		left: 70px
+		bottom: 205px
+		z-index: 500
+		color: #fff
+		text-align: left
+	&__title
+		font-size: 80px
+		position: relative
+		font-family: Conqueror
+		&:before
+			content: ''
+			height: 8px
+			width: 70px
+			position: absolute
+			bottom: 15px
+			left: 0
+			background-color: $accent
+	&__price
+		font-size: 26px
+		font-family: Conqueror
+	&__text
+		font-size: 18px
+		letter-spacing: 0.45px
+		font-family: openSans
+		font-style: italic
+		line-height: 24px
+	&__button
+		margin-top: 30px
+		display: inline-block
+
+.hotel 
+	.hotel-slider
+		position: relative
+		height: 658px
+		.hotel-slick
+			height: 100%
+			.slick-list
+				height: 100%
+				.slick-track
+					height: 100%
+					.slick-slide
+						height: 100%
+						div
+							height: 100%
+						.carousel-slick__item
+							height: 100%
+							.carousel-slick_img
+								height: 100%
+								width: 100%
+								background-size: cover
+								background-position: center
+	.slick-dots
+		position: absolute
+		margin: auto
+		bottom: 30px
+		display: flex
+		justify-content: center
+		flex-direction: row
+		padding: 0
+		right: 0
+		left: 0
+		top: unset
+		li
+			margin-right: 20px
+	.slick-nav-hotel
+		.arrow
+			height: 1px
+			width: 140px
+			background-color: $accent
+			position: absolute
+		.arrow-wrap
+			padding: 10px 0	
+			cursor: pointer
+			position: absolute
+			right: unset
+			height: 20px
+			width: 140px
+		.nav-hotel__next
+			top: unset
+			bottom: 47px
+			right: 30px
+		.nav-hotel__prev
+			bottom: 47px
+			left: 30px
+		.prev:before
+				content: ''
+				position: absolute
+				left: -5px
+				right: unset
+				margin: auto
+				bottom: -5px
+				border: 6px solid transparent
+				border-right: 5px solid $accent
+
+		.next:before
+				content: ''
+				position: absolute
+				left: unset
+				right: -5px
+				margin: auto
+				top: -5px
+				border: 5px solid transparent
+				border-left: 5px solid $accent
+			
+	&__discription
+		padding: 12px 68px 22px 28px
+		background-color: #fff
+		overflow: hidden
+		color: #000
+		font-size: 18px
+		max-height: 676px
+	&__gerb
+		display: flex
+		margin: 35px 0 20px
+		width: 350px
+		align-items: center
+	&__gerb-text
+		margin-left: 20px
+		font-size: 18px
+		font-family: openSans
+		line-height: 32px
+		color: #0c1118
+	&__link
+		font-family: opensans
+		margin-top: 30px
+		display: block
+		color: $text
+		&:hover
+			color: $text
+	&__text
+		font-size: 18px
+		line-height: 32px
+		font-family: opensans
+		height: 275px
+		overflow: hidden
+
+
+
+
+
+.services
+	display: flex
+	flex-direction: column
+	padding-top: 0
+	.row	
+		flex: 1 1 100%
+	.col-lg-6:nth-child(2) 
+		.services-item
+			background-image: url(../img/services2.jpg)
+			&__icon	
+				background-image: url(../img/item2.png)
+	.col-lg-6:nth-child(3) 
+		.services-item
+			background-image: url(../img/services3.jpg)
+			&__icon	
+				background-image: url(../img/item3.png)
+	.col-lg-6:nth-child(4) 
+		.services-item
+			background-image: url(../img/services4.jpg)
+			&__icon	
+				background-image: url(../img/item4.png)
+	&-item
+		background-image: url(../img/services1.jpg)
+		background-repeat: no-repeat
+		background-position: center 
+		background-size: cover
+		height: 100%
+		transition: .3s ease
+		display: block
+		&:hover 
+			text-decoration: none
+			.services-item__wrapper
+				background-color: rgba(255,255,255, 0)
+				transition: .3s ease
+			.services-item__title
+				color: #fff
+				transition: .3s ease
+
+		&__wrapper
+			padding-top: 60px
+			height: 100%
+			transition: .3s ease
+			background-color: rgba(255,255,255, .8)
+		&__icon		
+			background-image: url(../img/item1.png)
+			width: 140px
+			height: 160px
+			background-repeat: no-repeat
+			background-position: center
+			margin: auto
+		&__title
+			text-align: center
+			font-size: 30px
+			margin-top: 10px
+			color: $text
+			transition: .3s ease
+
+.special
+	padding-top: 0
+	.row	
+		.col-lg-6:nth-child(3), .col-lg-6:nth-child(4)
+			.special-item-content
+				flex-direction: row-reverse
+			.special-item__text-wrap
+				order: 1
+				left: 0
+				right: unset
+.special-item
+	background: #fff
+	img
+		width: 54.3%
+		z-index: 200
+		position: relative
+.special-item-content
+	display: flex
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: left
+	position: relative
+	align-items: center
+	
+.special-item__text-wrap 
+	width: 50%
+	height: 100%	
+	display: flex
+	align-items: center
+	position: absolute
+	overflow: hidden
+	right: 0
+	bottom: 0
+	top: 0
+
+	&:before
+		content: ''
+		height: 8px
+		width: 108px
+		background-color: $accent
+		position: absolute
+		bottom: 20px
+		right: 0
+		left: 0
+		margin: auto
+	&:after
+		content: ''
+		height: 8px
+		width: 108px
+		background-color: $accent
+		position: absolute
+		top: 20px
+		right: 0
+		left: 0
+		margin: auto
+.special-item__text
+	background-color: #fff
+	text-align: center
+	padding: 15px 30px
+	display: inline-block
+	position: absolute
+	line-height: 20px
+	
+.review
+	padding: 0 100px 100px
+	position: relative
+	&-item
+		height: 450px
+		width: 300px
+		background-color: #fff
+		border: 3px solid #c1b495
+		position: relative
+		&:before
+			content: ''
+			height: 50px
+			width: 50px
+			background-color: #fff
+			border: 3px solid #c1b495
+			bottom: -26px
+			left: 50px
+			position: absolute
+			transform: rotate(45deg)
+		&__content
+			background-color: #fff
+			height: 100%
+			z-index: 200
+			position: relative
+			padding: 10px
+		&__text
+			height: 91%
+			overflow: hidden
+			background-image: url(../img/quote.png)
+			background-repeat: no-repeat
+			text-indent: 40px
+
+		&__link
+			color: $text
+			margin-top: 15px
+			display: inline-block
+			&:hover
+				color: $text
+		&__name-block	
+			color: #fff
+			position: absolute
+			bottom: -130px	
+			left: 20px
+
+	&-slider
+		.slick-track
+			height: 690px
+		.slick-slide
+			padding: 0 15px 40px 15px
+		.slick-center
+			.review-item
+				height: 550px
+				transition: .5s ease
+		.slick-dots
+			position: absolute
+			margin: auto
+			bottom: -80px
+			display: flex
+			justify-content: center
+			flex-direction: row
+			padding: 0
+			right: 0
+			left: 0
+			top: unset
+			li
+				border: 3px solid #fff
+				margin-right: 20px
+			
+	.slick-nav-review
+		.arrow
+			height: 1px
+			width: 140px
+			background-color: #fff
+			position: absolute
+		.arrow-wrap
+			padding: 10px 0	
+			cursor: pointer
+			position: absolute
+			right: unset
+			height: 20px
+			width: 140px
+			bottom: -62px
+		.nav-review__next
+			top: unset
+			right: 30px
+		.nav-review__prev
+			left: 30px
+		.prev:before
+			content: ''
+			position: absolute
+			left: -5px
+			right: unset
+			margin: auto
+			bottom: -5px
+			border: 6px solid transparent
+			border-right: 5px solid #fff
+
+		.next:before
+			content: ''
+			position: absolute
+			left: unset
+			right: -5px
+			margin: auto
+			top: -5px
+			border: 5px solid transparent
+			border-left: 5px solid #fff
+
+footer
+	padding: 50px
+	padding-bottom: 25px
+	background-color: #672A2C
+.footer-logo
+	&__text
+		display: inline-block
+		vertical-align: bottom
+		line-height: .5
+		color: rgba(255,255,255, .3)
+		margin-left: 20px
+.contacts
+	margin-top: 40px
+	.contacts-icon
+		color: #fff
+		font-family: "Open Sans"
+		font-size: 12px
+		line-height: 35px
+		position: relative
+		padding-left: 40px
+		&:before
+			content: ''
+			width: 28px
+			height: 28px
+			background-image: url(../img/icon-phone.png)
+			background-repeat: no-repeat
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			background-position: center
+		&:nth-child(3):before
+			background-image: url(../img/icon-geo.png)
+		&:nth-child(4):before
+			background-image: url(../img/icon-mail.png)
+	.contacts__mail
+		color: #ffffff
+		&:hover
+			color: $accent
+.social
+	.social-icon
+		display: inline-block
+		width: 47px
+		height: 47px
+		background-image: url(../img/insta.png)
+		background-repeat: no-repeat
+		margin-right: 13px
+		margin-top: 30px
+		&:nth-child(2)
+			background-image: url(../img/vk.png)
+		&:nth-child(3)
+			background-image: url(../img/ok.png)
+		&:nth-child(4)
+			background-image: url(../img/fb.png)
+.footer-menu
+	padding: 0
+	margin: 0
+	display: flex
+	justify-content: space-between
+	font-family: Conqueror
+	font-size: 16px
+	list-style: none
+	li 
+		width: 100%
+		line-height: 30px
+	a 
+		color: #fff
+		position: relative
+		&:hover
+			text-decoration: none
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 2px
+				background-color: $accent
+				bottom: -5px
+
+
+.footer-submenu
+	list-style: none
+	padding: 0
+	margin: 0
+	position: relative
+	top: 15px
+	font-family: opensans
+	font-size: 12px
+
+.scroll-top
+	width: 61px
+	height: 61px
+	font-size: 30px
+	text-align: center
+	line-height: 58px
+	border: 3px solid $accent
+	border-radius: 50%
+	position: fixed
+	bottom: 20px
+	right: 20px
+	color: $accent
+	cursor: pointer
+	z-index: 3000
+	&:hover
+		color: $accent
+.ae-logo
+	display: block
+	text-align: right
+	
+.secondary-page
+	padding: 30px 0
+	h1 
+		color: $text
+		font-size: 48px
+		font-weight: 700
+		letter-spacing: 3.6px
+		text-align: center
+
+	h2 
+		font-weight: 400
+		font-size: 30px
+		letter-spacing: 2.25px
+		text-align: center
+		color: $accent
+	p 
+		color: #0c1118
+	.review
+		padding: 0
+		text-align: center
+		.section_title
+			margin-bottom: 30px
+		.review-item
+			text-align: left
+			margin: auto
+			margin-bottom: 150px
+		.item:nth-child(3n+2) .review-item
+			height: 550px
+		.button
+			display: inline-block
+			margin-bottom: 40px
+			padding: 18px 70px
+		.review-button
+			i 
+				margin-left: -15px
+				padding-right: 15px
+	
+	.secondary
+		background-color: #fff
+		margin: 0 2em
+		padding: 5% 10%
+		ul 
+			font-family: opensans
+			font-weight: 700
+			color: #0c1118
+			list-style: none
+			padding: 0
+			li
+				position: relative
+				padding-left: 50px
+				&:before
+					content: ''
+					height: 5px
+					width: 30px
+					background-color: $accent
+					left: 0
+					top: 0
+					bottom: 0
+					margin: auto
+					position: absolute
+	.secondary-link
+		text-decoration: none
+		position: relative
+		color: $text
+		margin-bottom: 2em
+		display: inline-block
+		&:hover
+			color: $accent
+		&:after
+			content: ''
+			height: 1px
+			width: 100%
+			background-color: $accent
+			bottom: -10px
+			left: 0
+			position: absolute
+	
+	.slider-company
+		img 
+			width: 100%
+	.slick-dots
+		position: absolute
+		margin: auto
+		bottom: 30px
+		display: flex
+		justify-content: center
+		flex-direction: row
+		padding: 0
+		right: 0
+		left: 0
+		top: unset
+		li
+			margin-right: 20px
+	.slick-arrow
+		height: 20px
+		width: 100px
+		position: absolute
+		border: none
+		font-size: 0
+		cursor: pointer
+		background-color: unset
+		bottom: 45px
+		z-index: 100
+		outline: none
+		&:before
+			content: ''
+			position: absolute
+			margin: auto
+			top: 0
+			bottom: 0
+			margin: auto
+			height: 6px
+			border: 6px solid transparent
+			border-right: 5px solid $accent
+		&:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: $accent
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
+	.slick-next
+		right: 10%
+		margin: auto
+	.slick-prev
+		left: 10%
+		margin: auto
+	.slick-next:before
+		right: -10px
+		border: 6px solid transparent
+		border-left: 5px solid $accent	
+	.slick-prev:before
+		left: -10px
+
+	.hotel-altay
+		display: flex
+		background-color: #fff
+		margin-top: 100px
+	.hotel-altay__left-block
+		flex: 1 1 50%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 20px
+	.hotel-altay__right-block
+		flex: 1 1 50%
+		padding: 50px 30px 
+	.hotel-altay__button
+		margin-top: 50px
+		padding: 10px 60px
+	.hotel-altay__title, .hotel-altay__footer
+		font-size: 20px
+		color: #0c1118
+	.hotel-altay__title
+		margin-bottom: 30px
+	.hotel-altay__footer
+		margin-top: 30px
+	.hotel-altay__button
+	
+	.hotel-img
+		img
+			width: 100%
+	.hotel__text
+		font-size: 16px
+		height: unset
+	.hotel__gerb-text
+		font-size: 19px
+		font-weight: 700
+		font-family: Conqueror
+	.hotel-altay.present
+		margin-bottom: 60px
+		.hotel-altay__left-block
+				padding: 0
+	.hotel__gerb
+		width: 100%
+	.hotel__link
+		font-size: 18px
+		font-style: italic
+		font-family: Conqueror
+		margin-bottom: 0
+		position: relative
+		margin-left: 80px
+		margin-top: 80px
+		&:before
+			content: ''
+			width: 72px
+			height: 82px
+			position: absolute
+			left: -80px
+			background-image: url(../img/pdf.png)
+			bottom: 0
+			background-size: contain
+			background-repeat: no-repeat
+	.advantages
+		&__item
+			border: 2px solid $accent
+			display: flex
+			align-items: center
+			height: 200px
+			margin: 10px
+			background-color: #fff
+			position: relative
+		&__title
+			font-size: 14px
+			font-family: opensans
+			color: #000
+			margin-left: 130px	
+			&:before
+				content: ''
+				position: absolute
+				width: 90px
+				height: 90px
+				border-radius: 50%
+				background-color: #ededed
+				background-image: url(../img/map.png)
+				background-position: center
+				background-repeat: no-repeat
+				left: 20px
+				top: 0
+				bottom: 0
+				margin: auto
+		.row
+			.item:nth-child(2)
+				.advantages__title:before
+					background-image: url(../img/waiter.png)
+			.item:nth-child(3)
+				.advantages__title:before
+					background-image: url(../img/room-key.png)
+			.item:nth-child(4)
+				.advantages__title:before
+					background-image: url(../img/handshake.png)
+			.item:nth-child(5)
+				.advantages__title:before
+					background-image: url(../img/diamond.png)
+			.item:nth-child(6)
+				.advantages__title:before
+					background-image: url(../img/hotel.png)
+			.item:nth-child(7)
+				.advantages__title:before
+					background-image: url(../img/breakfast.png)
+			.item:nth-child(8)
+				.advantages__title:before
+					background-image: url(../img/menu.png)
+			.item:nth-child(9)
+				.advantages__title:before
+					background-image: url(../img/star.png)
+					
+	.hotel-breackfast
+		margin-top: 55px
+	.hotel-breackfast__content
+		padding: 40px
+		height: 100%
+		background-color: #fff
+		font-size: 16px
+		font-family: opensans
+		line-height: 40px
+		.section_title
+			color: $text	
+	.hotel-breackfast__slider
+		height: 100%
+		.slick-list
+			height: 100%
+			.slick-track
+				height: 100%
+				.slick-slide
+					height: 100%
+					div
+						height: 100%
+					.carousel-slick__item
+						height: 100%
+						.carousel-slick_img
+							height: 100%
+							width: 100%
+							background-size: cover
+							background-position: center
+
+	.contacts-block
+		background-image: url(../img/contact.jpg)
+		background-repeat: no-repeat
+		background-position: left
+		background-size: cover
+		display: flex
+		align-items: center
+		margin-bottom: 50px
+		&__content
+			width: 403px
+			padding-left: 40px
+			.contacts_title
+				color: $text
+				text-align: left
+				font-size: 48px
+				font-family: Conqueror
+			.contacts
+				margin: 0
+				.contacts__mail
+					&:hover
+						color: $text
+				.contacts-icon
+					color: #000
+					&:before
+						background-image: url(../img/red-phone.png)
+					&:nth-child(3):before
+						background-image: url(../img/red-geo.png)
+					&:nth-child(4):before
+						background-image: url(../img/red-mail.png)
+
+	.how-to-get
+		.item
+			padding: 10px
+
+		&__item
+			border: 2px solid $accent
+			display: flex
+			align-items: center
+			background-color: #fff
+			position: relative
+			min-height: 150px
+			height: 100%
+		&__title
+			font-size: 14px
+			font-family: opensans
+			color: #000
+			margin-left: 120px	
+			line-height: 1.15
+			padding: 10px
+			&:before
+				content: ''
+				position: absolute
+				width: 100px
+				height: 100px
+				background-position: center
+				background-repeat: no-repeat
+				background-size: contain
+				left: 10px
+				top: 0
+				bottom: 0
+				margin: auto
+		.row
+			.item:nth-child(1)
+				.how-to-get__title:before
+					background-image: url(../img/how-icon1.png)
+			.item:nth-child(2)
+				.how-to-get__title:before
+					background-image: url(../img/how-icon2.png)
+			.item:nth-child(3)
+				.how-to-get__title:before
+					background-image: url(../img/how-icon3.png)
+			.item:nth-child(4)
+				.how-to-get__title:before
+					background-image: url(../img/how-icon4.png)
+	.map	
+		margin: 55px 0
+		width: 100%
+		iframe
+			width: 100%
+	
+	.reserv-form
+		background-color: #fff
+		font-family: opensans
+		font-size: 12px
+		padding: 40px 10px
+		.section_title
+			color: $text
+			margin: 0 0 20px
+		form
+			width: 280px
+			display: flex
+			flex-direction: column
+			margin: auto
+			color: #000000
+			font-style: italic
+		input
+			width: 100%
+			border: 2px solid #e5e5e5
+			background-color: #f2f2f2
+			padding-left: 10px
+			font-style: normal
+			&:focus
+				border: 2px solid $accent
+		textarea
+			width: 100%
+			background-color: #f2f2f2
+			border: 2px solid #e5e5e5
+			padding: 10px
+			resize: none
+			&:focus
+				border: 2px solid $accent
+		button
+			margin: 10px auto
+			font-size: 12px
+			padding: 5px 30px
+			border: 2px solid #bfaf87
+
+	.hotel-item
+		text-align: center
+		background-color: #fff
+		padding: 10px 100px 150px
+		&__title
+			color: $text
+			font-size: 48px
+			font-family: Conqueror
+		&__price
+			font-size: 18px
+			font-family: Conqueror
+			font-weight: 700
+			color: #0c1118
+		p
+			font-family: Conqueror
+			color: #0c1118
+			font-size: 14px
+		&__button
+			display: inline-block
+			padding: 10px 40px
+			margin-bottom: 20px
+		&__links
+			margin: 30px 0
+			a 
+				font-size: 12px
+				color: #000
+				position: relative
+				display: inline-block
+				margin: 0 20px
+				&.active:after
+					content: ''
+					height: 2px
+					width: 100%
+					background-color: $accent
+					bottom: -5px
+					left: 0
+					position: absolute
+				&:hover
+					text-decoration: none
+					color: $accent
+		p 
+			max-width: 700px
+			margin: auto
+		&__nav
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: flex
+			justify-content: space-around
+			margin-top: 80px
+			>li 
+				display: inline-block
+				color: #000
+				position: relative
+				font-size: 16px
+				color: #aeaeae
+				width: 100%
+				padding: 20px 0
+				transition: all .4s ease
+				cursor: pointer
+				& a:hover,
+				& a:focus 
+					color: #929292
+					
+
+				&.active a
+					color: #000000
+
+				&:before,
+				&:after,
+				& a:after 
+					content: ''
+					position: absolute
+					bottom: 0
+					background: $accent
+				
+
+				&:before,
+				&:after 
+					width: 2px
+					height: 100%
+					opacity: 0
+					transform: scale3d(1, 0, 1)
+					transform-origin: 50% 0%
+					transition: transform 0s 0.1s, opacity 0.1s
+				
+
+				&:before 
+					left: 0
+				
+
+				&:after 
+					right: 0
+				
+
+				&.active:before,
+				&.active:after 
+					opacity: 1
+					transform: scale3d(1, 1, 1)
+					transition: transform 0.3s
+					transition-delay: 0.3s
+					transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+
+				& a:after 
+					left: 0
+					width: 100%
+					height: 2px
+					transition: transform 0.3s
+				
+
+				&.active a:after 
+					transform: translate3d(0, -66px, 0)
+					transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+				
+
+				a
+					padding-right: 30px
+					padding-left: 10px
+					&:before
+						content: '\f107'
+						position: absolute
+						right: 10%
+						font-weight: 300
+						font-size: 25px
+						height: 25px
+						line-height: 25px
+						font-family: 'Font Awesome 5 pro'
+						display: block
+						top: 0
+						bottom: 0
+						margin: auto
+				
+		&__nav-list
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: flex
+			justify-content: space-around
+			margin-top: 50px
+			flex-wrap: wrap
+			li 
+				display: inline-block
+				color: #000
+				position: relative
+				padding-left: 50px
+				font-family: Conqueror
+				font-size: 14px
+				margin-bottom: 30px
+
+				&:before
+					content: ''
+					width: 30px
+					height: 30px
+					background-image: url(../img/dryer.png)
+					background-repeat: no-repeat
+					background-position: center
+					position: absolute
+					left: 0
+					top: -5px
+				&:nth-child(2):before
+					background-image: url(../img/air-conditioner.png)
+				&:nth-child(3):before
+					background-image: url(../img/refrigerator.png)
+				&:nth-child(4):before
+					background-image: url(../img/term.png)
+				&:nth-child(4):before
+					background-image: url(../img/monitor.png)
+
+	.slider-hotel-item
+		margin-top: 55px
+		.slick-slide 
+			img
+				width: 100%
+	.booking-form
+		background-color: #fff
+		padding: 0px 20px 50px
+		.hotel-item__title
+			text-align: center
+		form
+			display: flex
+			flex-direction: column
+			max-width: 1100px
+			margin: auto
+			input
+				max-width: 250px
+				width: 100%
+			.row1
+				display: flex
+				justify-content: space-between
+				margin-bottom: 30px
+			.row2
+				display: flex
+				justify-content: space-between
+				margin-bottom: 30px
+				input
+					max-width: 150px
+			.row3
+				display: flex
+				justify-content: space-between
+				margin-bottom: 30px
+			.booking-form__title
+				font-size: 12px
+				font-family: opensans
+				font-style: italic
+				color: #000
+				margin-bottom: 5px
+			.booking-form__price
+				position: relative
+				background: $text
+				color: #fff
+				height: 40px
+				align-self: flex-end
+				max-width: 250px
+				width: 100%
+				text-align: center
+				line-height: 40px
+				flex: 1 1 33%
+				&:after
+					content: ''
+					position: absolute
+					top: 3px
+					bottom: 3px
+					right: 3px
+					left: 3px
+					border: 1px solid $accent
+			input
+				width: 100%
+				border: 2px solid #e5e5e5
+				background-color: #f2f2f2
+				padding-left: 10px
+				font-style: normal
+				height: 40px
+				min-width: 80px
+				font-family: opensans
+				&:focus
+					border: 2px solid $accent
+			
+			button
+				margin: 10px auto
+				font-size: 12px
+				padding: 5px 30px
+				border: 2px solid #bfaf87
+			.booking-form__date
+				max-width: 92px
+				width: 100%
+				max-height: 92px
+				background-image: url(../img/calendar.png)	
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+			.booking-form__time
+				max-width: 92px
+				width: 100%
+				max-height: 92px
+				background-image: url(../img/clock.png)	
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+			p 
+				max-width: 400px
+				font-style: italic
+				font-size: 12px
+				margin: auto
+				text-align: center
+				margin-top: 20px
+			.fs-dropdown
+				button 
+					outline: none
+					border: none
+					height: 40px
+					width: 100%
+					border: 2px solid #e5e5e5
+					background-color: #f2f2f2
+					padding-left: 10px
+					font-style: normal
+					min-width: 80px
+					font-family: opensans
+					&:focus
+						border: 2px solid $accent
+						background-color: #fff
+			.fs-dropdown-options
+				border: 2px solid $accent
+				border-top:  none
+				button 
+					background-color: #fff
+					border: none
+					&:hover
+						background-color: #b7a681
+		
+	.catalog-items
+		.item-list
+			.catalog-item
+				background-image: url(../img/banner.jpg)
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+				height: 300px
+				position: relative
+				&__text-block
+					position: absolute
+					width: 200px
+					height: 100px
+					right: 0
+					left: 0
+					bottom: 0
+					top: 0
+					z-index: 500
+					color: #fff
+					text-align: center
+					margin: auto
+				&__title
+					font-size: 30px
+					position: relative
+					font-family: Conqueror
+					margin-bottom: 20px
+
+					&:before
+						content: ''
+						height: 8px
+						width: 70px
+						position: absolute
+						bottom: -10px
+						left: 0
+						right: 0
+						background-color: $accent
+						margin: auto
+				&__price
+					font-size: 18px
+					font-family: Conqueror
+@import "media" // Always at the end
